@@ -6,6 +6,8 @@ O **Lux Cafe** é o website oficial da cafeteria, desenvolvido como um projeto d
 <br>
 O projeto utiliza HTML5, CSS3 e JavaScript puro para apresentar de forma clara e sofisticada o cardápio, horários e a filosofia da marca, garantindo uma experiência de usuário limpa e profissional em qualquer dispositivo.
 <br>...
+<h2 aling ="center">📷 Imagem do Projeto</h2>
+
 ## 🌟 Visualização do Projeto
 
 Acesse o link abaixo para visualizar a versão final do projeto:
