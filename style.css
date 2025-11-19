@@ -22,12 +22,6 @@ body {
 }
 
 /* Header styling */
-.header > section {
-    display: flex; /* Enables flexbox */
-    align-items: center; /* Vertically center items */
-    justify-content: space-between; /* Spread elements with space */
-    gap: 1rem; /* Space between items */
-}
 .header {
     background-color: var(--primary-color);
     color: white;
@@ -37,6 +31,13 @@ body {
     z-index: 1000; /* Keeps header on top */
 }
 
+.header > section {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Spread elements with space */
+    gap: 1rem; /* Space between items */
+}
+
 .header .logo img {
     height: 50px; /* Logo size */
 }
@@ -44,11 +45,12 @@ body {
 /* Navbar links */
 .navbar {
     display: flex;
+    gap:1rem;
 }
+
 .navbar a {
     color: white;
     text-decoration: none;
-    margin: 0 1rem;
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -58,6 +60,11 @@ body {
 }
 
 /* Icon container */
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
 .icons img {
     margin-left: 1rem;
     cursor: pointer;
@@ -229,33 +236,19 @@ p{
     padding: 40px;
     flex-wrap: wrap;  
     background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    
-}
-
-.footer p {
-    margin-top: 1rem;
-    margin-bottom: 0;
-    font-size: 0.9rem;
-    color:var(--secondary-color);
+    color: white;    
 }
 .footer-left {
     width: 48%;
-    height: auto;
-
 }/* Títulos */
 .footer-left h2 {
     margin: 0;
     font-size: 28px;
 }
-
 .footer-left p {
     margin-bottom: 20px;
     font-size: 18px;
 }
-
 /* Mapa */
 .map-container {
     margin-left: 80px;
