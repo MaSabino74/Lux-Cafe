@@ -1,3 +1,4 @@
+
 # ☕ Lux Café - Website Institucional
 <br>
 O **Lux Cafe** é o website oficial da cafeteria, desenvolvido como um projeto de estudo e portfólio para apresentar o cardápio, horários de funcionamento, localização e a filosofia da marca, focando em uma experiência de usuário agradável e responsiva.
@@ -31,20 +32,6 @@ Este projeto foi construído utilizando as bases da web moderna:
 * **Localização Integrada:** Uso de *iframe* para exibir a localização via Google Maps.
 * **Seção de Review:** Apresentação de depoimento de crítica para reforçar a qualidade do café.
 
-## 🛠️ Como Executar o Projeto Localmente
-
-Siga estas etapas para ter uma cópia local do projeto em sua máquina:
-
-1.  **Clone o Repositório:**
-    ```bash
-    git clone [https://github.com/SeuUsuario/Lux-Cafe-Website.git](https://github.com/SeuUsuario/Lux-Cafe-Website.git)
-    ```
-2.  **Navegue até o Diretório do Projeto:**
-    ```bash
-    cd Lux-Cafe-Website
-    ```
-3.  **Abra o Arquivo `index.html`:**
-    Simplesmente clique duas vezes no arquivo `index.html` no seu explorador de arquivos, ou abra-o diretamente no seu navegador preferido.
 
 ## 🤝 Contribuições
 
@@ -63,4 +50,4 @@ Contribuições, sugestões e *pull requests* são muito bem-vindas! Se você en
 * **LinkedIn:** https://www.linkedin.com/in/marcos-sabino-dev/
 
 ---
-**Lux Café © 2024**# Lux-Cafe
+**Lux Cafe © 2025**# Lux-Cafe
