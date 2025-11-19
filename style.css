@@ -1,0 +1,361 @@
+/* Global reset and base styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root variables for colors and fonts */
+:root {
+    --primary-color: #6b4226; /* Deep coffee brown */
+    --secondary-color: #c9a66b; /* Soft gold */
+    --background-color: #fff8f0; /* Light cream background */
+    --text-color: #3e2a14; /* Dark coffee text */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+/* Header styling */
+.header > section {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Spread elements with space */
+    gap: 1rem; /* Space between items */
+}
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps header on top */
+}
+
+.header .logo img {
+    height: 50px; /* Logo size */
+}
+
+/* Navbar links */
+.navbar {
+    display: flex;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--secondary-color);
+}
+
+/* Icon container */
+.icons img {
+    margin-left: 1rem;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* Main content area */
+main {
+    padding: 2rem;
+}
+
+/* Buttons */
+.btn, .btn-sobre {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover, .btn-sobre:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Section titles with emphasis */
+.titles {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.titles span {
+    color: var(--secondary-color);
+}
+
+/* About section */
+.about .row {
+    position: relative; /* Needed for absolute positioning inside */
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Make container-image position relative to contain the overlay text */
+.container-image {
+    position: relative;
+    flex: 1; /* To take equal space with content */
+}
+
+.container-image img {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay text box positioned absolutely on the image */
+.about .content {
+    position: absolute; /* Position text on top of image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to center exactly */
+    color: white; /* Contrasting color */
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    max-width: 90%; /* Responsive max width */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* You can keep the existing content styles for text formatting */
+.about .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: inherit; /* Use white from above */
+}
+
+.about .content p {
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+/* Menu section - boxes */
+.box-container {
+    margin-bottom: 25px;;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.box {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 1rem;
+    max-width: 220px;
+    text-align: center;
+}
+
+.box img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.box h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Price styling */
+.price {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.price span {
+    font-weight: normal;
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+    color: #999;
+}
+
+/* Review section stars and user images */
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.review-box{
+    margin-bottom: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 1rem;
+    max-width: 220px;
+    text-align: center;
+}
+
+.user {
+    width: 80px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+
+/* Footer section */
+.footer {
+    display: flex;                /* Coloca as colunas lado a lado */
+    justify-content: space-between; /* Espaço entre elas */
+    align-items: flex-start;     /* Alinha ao topo */
+    padding: 40px;
+    flex-wrap: wrap;  
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+.footer p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color:var(--secondary-color);
+}
+.footer-left {
+    width: 48%;
+    height: auto;
+
+}/* Títulos */
+.footer-left h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.footer-left p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* Mapa */
+.map-container {
+    margin-left: 80px;
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Coluna direita */
+.footer-right {
+    width: 45%;
+}
+
+.footer-right h3 {
+    margin-top: 100px;
+    margin-bottom: 5px;
+}
+
+.footer-right p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Lista de contatos */
+.contact, .social-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.contact p, .social-list {
+    margin: 10px 0;
+    display: flex;
+    font-size: 18px;
+    margin-right: 10px;
+    font-size: 22px;
+}
+/* --- ESTILOS DO CONTÊINER DE REDES SOCIAIS */
+/* --- Container dos Ícones --- */
+.social-list {
+    display: flex; 
+    justify-content: center; 
+    padding: 20px 0;}
+
+/* --- Estilo Base dos Ícones --- */
+.social-list a i {
+    font-size: 36px; 
+    color: #555; 
+    cursor: pointer; 
+    transition: all 0.3s ease;}
+
+/* --- Efeitos Hover Específicos por Rede Social --- */
+
+/* LinkedIn */
+.fa-square-linkedin:hover {
+    color: #0A66C2; /* Cor oficial do LinkedIn (Azul) */
+    transform: translateY(-3px); /* Pequeno movimento para cima */
+}
+
+/* GitHub */
+.fa-square-github:hover {
+    color: #333; /* Cor oficial do GitHub (Preto/Cinza Escuro) */
+    transform: translateY(-3px);
+}
+
+/* E-mail */
+.fa-envelope:hover {
+    color: #D93025; /* Um vermelho do Gmail/Google para representar */
+    transform: translateY(-3px);
+}
+
+/* WhatsApp */
+.fa-square-whatsapp:hover {
+    color: #25D366; /* Cor oficial do WhatsApp (Verde) */
+    transform: translateY(-3px);
+}
+.footer-bottom {
+    width: 100%;                 /* Ocupa toda a largura */
+    text-align: center;          /* Centraliza o conteúdo */
+    margin-top: 30px;            /* Espaço para separar das colunas */
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Linha suave */
+}
+
+.footer-bottom p {
+    font-size: 15px;
+    color: #fff;
+}
+
+.footer-bottom a {
+    color: #ffe27a;              /* Um destaque suave, opcional */
+    text-decoration: none;
+}
+
+
