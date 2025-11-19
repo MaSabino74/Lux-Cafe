@@ -1,0 +1,204 @@
+/* Tablets e dispositivos médios (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .titles {
+        font-size: 2rem;
+    }
+    
+    .map-container {
+        margin-left: 40px;
+        width: 500px;
+        height: 250px;
+    }
+    
+    .footer-right h3 {
+        margin-top: 50px;
+    }
+}
+
+/* Tablets em modo retrato (768px ou menos) */
+@media screen and (max-width: 768px) {
+    /* Header ajustes */
+    .header {
+        padding: 1rem;
+    }
+    
+    .header > section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .navbar a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Main content */
+    main {
+        padding: 1rem;
+    }
+    
+    .titles {
+        font-size: 1.8rem;
+    }
+    
+    /* About section */
+    .about .row {
+        flex-direction: column;
+    }
+    
+    .about .content {
+        position: static;
+        transform: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .about .content h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Footer ajustes */
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .footer-left,
+    .footer-right {
+        width: 100%;
+    }
+    
+    .map-container {
+        margin-left: 0;
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+    }
+    
+    .footer-right h3 {
+        margin-top: 30px;
+    }
+    
+    .social-list {
+        justify-content: center;
+    }
+}
+
+/* Smartphones (480px ou menos) */
+@media screen and (max-width: 480px) {
+    /* Header */
+    .header .logo img {
+        height: 40px;
+    }
+    
+    .navbar a {
+        font-size: 0.8rem;
+        margin: 0 0.3rem;
+    }
+    
+    .icons img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Títulos */
+    .titles {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Botões */
+    .btn, .btn-sobre {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* About section */
+    .about .content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .about .content p {
+        font-size: 0.9rem;
+    }
+    
+    /* Box containers */
+    .box-container,
+    .review-container {
+        gap: 1rem;
+    }
+    
+    .box,
+    .review-box {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .box img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Parágrafos */
+    p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 15px;
+    }
+    
+    .footer-left h2 {
+        font-size: 22px;
+    }
+    
+    .footer-left p,
+    .contact p {
+        font-size: 16px;
+    }
+    
+    .map-container {
+        height: 200px;
+    }
+    
+    .social-list a i {
+        font-size: 28px;
+    }
+    
+    .footer-bottom p {
+        font-size: 13px;
+    }
+}
+
+/* Smartphones muito pequenos (360px ou menos) */
+@media screen and (max-width: 360px) {
+    .header {
+        padding: 0.5rem;
+    }
+    
+    .titles {
+        font-size: 1.3rem;
+    }
+    
+    .navbar a {
+        font-size: 0.75rem;
+    }
+    
+    .box img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .social-list a i {
+        font-size: 24px;
+    }
+}
