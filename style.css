@@ -232,7 +232,7 @@ p{
 .footer {
     display: flex;                /* Coloca as colunas lado a lado */
     justify-content: space-between; /* Espaço entre elas */
-    align-items: center;     /* Alinha ao topo */
+    align-items: flex-start;     /* Alinha ao topo */
     padding: 40px;
     flex-wrap: wrap;  
     background-color: var(--primary-color);
