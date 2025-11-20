@@ -64,6 +64,11 @@ body {
     vertical-align: middle;
 }
 
+.menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
 /* Main content area */
 main {
     padding: 2rem;

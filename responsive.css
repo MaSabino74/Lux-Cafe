@@ -28,7 +28,50 @@
     .icons {
         gap: 0.5rem;
     }
+    /* Faz o ícone do menu aparecer */
+    .menu-btn {
+        display: block; 
+        order: 3; /* Garante que ele fique do lado direito (opcional) */
+        z-index: 1001; /* Garante que esteja acima de tudo */
+        margin-left: 1rem; /* Adiciona espaço entre ele e os outros ícones */
+    }
 
+    /* Ajuste para o layout do cabeçalho mobile */
+    .header > section {
+        /* Para telas menores, se o menu-btn estiver antes do icons no HTML,
+           pode ser necessário usar 'order' para reorganizar. 
+           Se você colocar o menu-btn DEPOIS dos icons no HTML,
+           pode remover o 'order: 3;' */
+        justify-content: space-between; 
+    }
+
+    /* Oculta a navbar em linha para mobile (como já fizemos) */
+    .navbar {
+        display: none; 
+        
+        /* O estilo abaixo é o que será aplicado quando a navbar estiver ATIVA */
+        position: absolute;
+        top: 100%; /* Abaixo do header */
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color); 
+        flex-direction: column; /* Links empilhados */
+        text-align: center;
+        transition: transform 0.3s ease-out;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Classe a ser adicionada por JavaScript quando o menu for clicado */
+    .navbar.active {
+        display: flex; /* Exibe a navbar no modo coluna */
+    }
+}
     /* --- Seção About --- */
     .about .row {
         flex-direction: column; /* Empilha a imagem e o texto */
