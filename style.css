@@ -21,31 +21,31 @@ body {
     line-height: 1.6;
 }
 
-/* Header styling */
+/* --- Header styling --- */
 .header {
     background-color: var(--primary-color);
     color: white;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Keeps header on top */
+    z-index: 1000;
 }
 
 .header > section {
-    display: flex; /* Enables flexbox */
-    align-items: center; /* Vertically center items */
-    justify-content: space-between; /* Spread elements with space */
-    gap: 1rem; /* Space between items */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .header .logo img {
-    height: 50px; /* Logo size */
+    height: 50px;
 }
 
 /* Navbar links */
 .navbar {
     display: flex;
-    gap:1rem;
+    gap: 1rem;
 }
 
 .navbar a {
@@ -71,12 +71,12 @@ body {
     vertical-align: middle;
 }
 
-/* Main content area */
+/* --- Main content area --- */
 main {
     padding: 2rem;
 }
 
-/* Buttons */
+/* --- Buttons --- */
 .btn, .btn-sobre {
     display: inline-block;
     background-color: var(--primary-color);
@@ -95,10 +95,11 @@ main {
     background-color: var(--secondary-color);
 }
 
-/* Section titles with emphasis */
+/* --- Section titles with emphasis --- */
 .titles {
     text-align: center;
-    font-size: 2.5rem;
+    /* Usando clamp() para melhor responsividade de títulos grandes */
+    font-size: clamp(1.8rem, 5vw, 2.5rem); 
     margin-bottom: 2rem;
     color: var(--primary-color);
 }
@@ -107,18 +108,25 @@ main {
     color: var(--secondary-color);
 }
 
-/* About section */
+/* --- Parágrafos (Estilo específico removido, aplicar via classes se necessário) --- */
+/* Estilo genérico de parágrafo mais leve. Use classes para margens e alinhamentos específicos. */
+p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* --- About section --- */
 .about .row {
-    position: relative; /* Needed for absolute positioning inside */
+    position: relative;
     display: flex;
     gap: 2rem;
     align-items: center;
 }
 
-/* Make container-image position relative to contain the overlay text */
 .container-image {
     position: relative;
-    flex: 1; /* To take equal space with content */
+    flex: 1;
 }
 
 .container-image img {
@@ -130,47 +138,63 @@ main {
 
 /* Overlay text box positioned absolutely on the image */
 .about .content {
-    position: absolute; /* Position text on top of image */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset to center exactly */
-    color: white; /* Contrasting color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     padding: 1rem 2rem;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    max-width: 90%; /* Responsive max width */
+    max-width: 90%;
     box-sizing: border-box;
     text-align: center;
 }
 
-/* You can keep the existing content styles for text formatting */
 .about .content h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: inherit; /* Use white from above */
+    color: inherit;
 }
 
 .about .content p {
     margin-bottom: 1rem;
     color: inherit;
+    /* Sobrescreve o estilo geral de p para alinhar à esquerda, se necessário */
+    text-align: left; 
 }
 
-/* Menu section - boxes */
-.box-container {
-    margin-bottom: 25px;;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
 
-.box {
+/* --- Cartão Base (Para Menu e Review - Otimização) --- */
+.card-style {
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     padding: 1rem;
     max-width: 220px;
     text-align: center;
+    margin-bottom: 25px; /* Aplica a margem que estava repetida */
+}
+
+
+/* --- Menu section - boxes --- */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Utiliza a classe base card-style (aplicar no HTML ou juntar os seletores se não for possível) */
+.box {
+    /* Mantido para compatibilidade, mas o ideal seria aplicar .card-style no HTML */
+    background: white; 
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 1rem;
+    max-width: 220px;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .box img {
@@ -197,21 +221,24 @@ main {
     color: #999;
 }
 
-/* Review section stars and user images */
+/* --- Review section stars and user images --- */
 .review-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
 }
+
+/* Utiliza a classe base card-style (aplicar no HTML ou juntar os seletores se não for possível) */
 .review-box{
-    margin-bottom: 25px;
+    /* Mantido para compatibilidade, mas o ideal seria aplicar .card-style no HTML */
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     padding: 1rem;
     max-width: 220px;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .user {
@@ -220,35 +247,33 @@ main {
     margin: 10px 0;
 }
 
-p{
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 1.2rem;
-    color: var(--text-color);
-}
-
-
-/* Footer section */
+/* --- Footer section --- */
 .footer {
-    display: flex;                /* Coloca as colunas lado a lado */
-    justify-content: space-between; /* Espaço entre elas */
-    align-items: flex-start;     /* Alinha ao topo */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 40px;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
     background-color: var(--primary-color);
-    color: white;    
+    color: white;
 }
+
 .footer-left {
-    width: 48%;
-}/* Títulos */
+    width: 48%; /* Manter o layout de desktop */
+}
+
+/* Títulos */
 .footer-left h2 {
     margin: 0;
     font-size: 28px;
 }
+
 .footer-left p {
     margin-bottom: 20px;
     font-size: 18px;
+    text-align: left; /* Garante alinhamento esquerdo no desktop */
 }
+
 /* Mapa */
 .map-container {
     margin-left: 80px;
@@ -258,27 +283,31 @@ p{
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 .map-container iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
 
-
 /* Coluna direita */
 .footer-right {
-    width: 45%;
+    width: 45%; /* Manter o layout de desktop */
 }
 
+/* Ajuste: Remove margem superior excessiva para desktop. */
 .footer-right h3 {
-    margin-top: 100px;
+    margin-top: 0; 
     margin-bottom: 5px;
-    align-items: center;
+    font-size: 24px;
+    /* SOLUÇÃO: text-align: left, para ser alterado apenas na media query */
+    text-align: left; 
 }
 
 .footer-right p {
     margin-bottom: 15px;
     line-height: 1.5;
+    text-align: left; /* Garante alinhamento esquerdo no desktop */
 }
 
 /* Lista de contatos */
@@ -295,60 +324,60 @@ p{
     margin-right: 10px;
     font-size: 22px;
 }
-/* --- ESTILOS DO CONTÊINER DE REDES SOCIAIS */
-/* --- Container dos Ícones --- */
+
+/* --- ESTILOS DO CONTÊINER DE REDES SOCIAIS --- */
 .social-list {
-    display: flex; 
-    justify-content: center; 
-    padding: 20px 0;}
+    display: flex;
+    justify-content: flex-start; /* Alinha à esquerda no desktop */
+    padding: 20px 0;
+}
 
-/* --- Estilo Base dos Ícones --- */
+/* --- Estilo Base dos Ícones (Melhorado para usar var) --- */
 .social-list a i {
-    font-size: 36px; 
-    color: #555; 
-    cursor: pointer; 
-    transition: all 0.3s ease;}
+    font-size: 36px;
+    color: var(--secondary-color); /* Usando a cor dourada como base */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 15px; /* Adiciona espaçamento entre os ícones */
+}
 
-/* --- Efeitos Hover Específicos por Rede Social --- */
-
-/* LinkedIn */
+/* --- Efeitos Hover Específicos por Rede Social (Mantidos) --- */
 .fa-square-linkedin:hover {
-    color: #0A66C2; /* Cor oficial do LinkedIn (Azul) */
-    transform: translateY(-3px); /* Pequeno movimento para cima */
+    color: #0A66C2;
+    transform: translateY(-3px);
 }
 
-/* GitHub */
 .fa-square-github:hover {
-    color: #333; /* Cor oficial do GitHub (Preto/Cinza Escuro) */
+    color: #333;
     transform: translateY(-3px);
 }
 
-/* E-mail */
 .fa-envelope:hover {
-    color: #D93025; /* Um vermelho do Gmail/Google para representar */
+    color: #D93025;
     transform: translateY(-3px);
 }
 
-/* WhatsApp */
 .fa-square-whatsapp:hover {
-    color: #25D366; /* Cor oficial do WhatsApp (Verde) */
+    color: #25D366;
     transform: translateY(-3px);
 }
+
 .footer-bottom {
-    width: 100%;                 /* Ocupa toda a largura */
-    text-align: center;          /* Centraliza o conteúdo */
-    margin-top: 30px;            /* Espaço para separar das colunas */
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
     padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Linha suave */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-bottom p {
     font-size: 15px;
     color: #fff;
+    margin: 0; /* Remove margem extra do parágrafo */
 }
 
 .footer-bottom a {
-    color: #ffe27a;              /* Um destaque suave, opcional */
+    color: #ffe27a;
     text-decoration: none;
 }
 

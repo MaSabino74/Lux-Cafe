@@ -1,204 +1,97 @@
-/* Tablets e dispositivos médios (768px - 1024px) */
-@media screen and (max-width: 1024px) {
-    .titles {
-        font-size: 2rem;
-    }
-    
-    .map-container {
-        margin-left: 40px;
-        width: 500px;
-        height: 250px;
-    }
-    
-    .footer-right h3 {
-        margin-top: 50px;
-    }
-}
+/* ======================================= */
+/* === RESPONSIVE STYLES (768px e abaixo) === */
+/* ======================================= */
 
-/* Tablets em modo retrato (768px ou menos) */
-@media screen and (max-width: 768px) {
-    /* Header ajustes */
-    .header {
-        padding: 1rem;
-    }
+@media (max-width: 768px) {
     
-    .header > section {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-    
-    .navbar a {
-        margin: 0 0.5rem;
-        font-size: 0.9rem;
-    }
-    
-    /* Main content */
+    /* --- Layout Geral e Espaçamento --- */
     main {
         padding: 1rem;
     }
-    
-    .titles {
-        font-size: 1.8rem;
-    }
-    
-    /* About section */
-    .about .row {
-        flex-direction: column;
-    }
-    
-    .about .content {
-        position: static;
-        transform: none;
-        background-color: rgba(0, 0, 0, 0.7);
-        max-width: 100%;
-        margin-top: 1rem;
-    }
-    
-    .about .content h3 {
-        font-size: 1.5rem;
-    }
-    
-    /* Footer ajustes */
-    .footer {
-        flex-direction: column;
-        padding: 20px;
-    }
-    
-    .footer-left,
-    .footer-right {
-        width: 100%;
-    }
-    
-    .map-container {
-        margin-left: 0;
-        width: 100%;
-        height: 250px;
-        margin-top: 20px;
-    }
-    
-    .footer-right h3 {
-        margin-top: 30px;
-    }
-    
-    .social-list {
-        justify-content: center;
-    }
-}
 
-/* Smartphones (480px ou menos) */
-@media screen and (max-width: 480px) {
-    /* Header */
-    .header .logo img {
-        height: 40px;
-    }
-    
-    .navbar a {
-        font-size: 0.8rem;
-        margin: 0 0.3rem;
-    }
-    
-    .icons img {
-        width: 20px;
-        height: 20px;
-    }
-    
-    /* Títulos */
     .titles {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* --- Header / Navegação (Ocultar/Ajustar Navbar) --- */
+    .header {
+        padding: 1rem 1rem;
     }
     
-    /* Botões */
-    .btn, .btn-sobre {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+    /* Exemplo: Ocultar a navbar e mostrar um botão de menu */
+    .navbar {
+        display: none; /* A navegação completa é oculta */
+        /* Para mostrar: você precisará de JavaScript ou de um checkbox CSS */
     }
-    
-    /* About section */
-    .about .content h3 {
-        font-size: 1.2rem;
+
+    /* Ajustar ícones para ficarem maiores em telas menores, se necessário */
+    .icons {
+        gap: 0.5rem;
+    }
+
+    /* --- Seção About --- */
+    .about .row {
+        flex-direction: column; /* Empilha a imagem e o texto */
+        gap: 1rem;
+    }
+
+    /* O texto overlay agora deve aparecer APÓS a imagem e com largura total */
+    .about .content {
+        position: static; /* Volta para o fluxo normal */
+        transform: none;
+        width: 100%; /* Ocupa a largura total abaixo da imagem */
+        max-width: 100%;
+        background-color: transparent; /* Remove o fundo semi-transparente */
+        color: var(--text-color); /* Usa a cor de texto padrão */
+        padding: 0;
+        text-align: left;
     }
     
     .about .content p {
-        font-size: 0.9rem;
+        text-align: left;
     }
     
-    /* Box containers */
-    .box-container,
-    .review-container {
-        gap: 1rem;
+    /* A imagem pode precisar de margem inferior se o .content estiver estático */
+    .container-image {
+        margin-bottom: 1rem;
     }
-    
-    .box,
-    .review-box {
-        max-width: 100%;
-        width: 100%;
-    }
-    
-    .box img {
-        width: 150px;
-        height: 150px;
-    }
-    
-    /* Parágrafos */
-    p {
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
-    
-    /* Footer */
-    .footer {
-        padding: 15px;
-    }
-    
-    .footer-left h2 {
-        font-size: 22px;
-    }
-    
-    .footer-left p,
-    .contact p {
-        font-size: 16px;
-    }
-    
-    .map-container {
-        height: 200px;
-    }
-    
-    .social-list a i {
-        font-size: 28px;
-    }
-    
-    .footer-bottom p {
-        font-size: 13px;
-    }
-}
 
-/* Smartphones muito pequenos (360px ou menos) */
-@media screen and (max-width: 360px) {
-    .header {
-        padding: 0.5rem;
+
+    /* --- Footer (SOLUÇÃO para o H3) --- */
+    .footer {
+        flex-direction: column; /* Empilha o conteúdo verticalmente */
+        padding: 20px;
+    }
+
+    /* Ocupa 100% da largura em telas menores */
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        text-align: center; /* **SOLUÇÃO: Centraliza o texto das colunas** */
+        margin-bottom: 20px;
+    }
+
+    /* Centraliza o TÍTULO do footer e ajusta a margem */
+    .footer-right h3 {
+        margin-top: 20px; /* Adiciona espaçamento entre as colunas empilhadas */
+        text-align: center; /* **SOLUÇÃO: Centraliza o h3** */
+    }
+
+    /* Centraliza os parágrafos e lista de contatos do footer */
+    .footer-left p,
+    .footer-right p {
+        text-align: center;
     }
     
-    .titles {
-        font-size: 1.3rem;
+    /* Centraliza o mapa e ajusta sua largura */
+    .map-container {
+        margin: 20px auto; /* Centraliza horizontalmente */
+        width: 100%; /* Ocupa toda a largura */
+        height: 200px; /* Altura reduzida */
     }
     
-    .navbar a {
-        font-size: 0.75rem;
-    }
-    
-    .box img {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .social-list a i {
-        font-size: 24px;
+    /* Centraliza a lista de ícones sociais */
+    .social-list {
+        justify-content: center;
     }
 }
