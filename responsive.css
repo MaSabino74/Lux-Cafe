@@ -71,7 +71,8 @@
     .navbar.active {
         display: flex; /* Exibe a navbar no modo coluna */
     }
-}
+
+
     /* --- Seção About --- */
     .about .row {
         flex-direction: column; /* Empilha a imagem e o texto */
@@ -98,7 +99,8 @@
     .container-image {
         margin-bottom: 1rem;
     }
-.btn {
+
+    .btn {
         padding: 0.6rem 1.2rem;
         font-size: 1rem;
     }
