@@ -70,7 +70,7 @@ main {
 }
 
 /* Buttons */
-.btn, .btn-sobre {
+.btn{
     display: inline-block;
     background-color: var(--primary-color);
     color: white;
@@ -84,7 +84,7 @@ main {
     text-decoration: none;
 }
 
-.btn:hover, .btn-sobre:hover {
+.btn:hover {
     background-color: var(--secondary-color);
 }
 
