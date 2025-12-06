@@ -14,6 +14,18 @@ O projeto utiliza HTML5, CSS3 e JavaScript puro para apresentar de forma clara e
 Acesse o link abaixo para visualizar a versão final do projeto:
 
 (https://github.com/MaSabino74/Lux-Cafe)
+<br>
+## 🌟 Visualização do Projeto
+
+<div align="center">Visão final do projeto em vários dispositivos:</div>
+<br>
+
+<div align="center">
+   <img src="https://github.com/MaSabino74/Lux-Cafe/blob/main/Mockup%20-%20Lux%20Cafe.jpg">
+</div> 
+ <div align="center"> Acesse o Projeto Online: https://luxcafeteria.netlify.app/</div>
+<br>
+
 
 
 
