@@ -13,7 +13,7 @@ O projeto utiliza HTML5, CSS3 e JavaScript puro para apresentar de forma clara e
 
 Acesse o link abaixo para visualizar a versão final do projeto:
 
-[Link para o Projeto Deployado (Ex: Netlify, Vercel)](https://[link-do-seu-projeto-online])
+(https://github.com/MaSabino74/Lux-Cafe)
 
 
 
